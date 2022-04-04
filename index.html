@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=PT+Serif:ital,wght@1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    html, body {height: 100%;}
+    * {
+      margin: 0;
+      padding: 0;
+      /* box-sizing: border-box; */
+    }
+
+    /* body * {
+      border: 1px solid;
+    } */
+
+    body {
+      background-image: url(./images/pattern-background-desktop.svg);
+      background-repeat: no-repeat;
+      background-color: var(--pale-blue);
+      display: flex;
+      flex-direction: column;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .card {
+      box-sizing: border-box;
+      height: 78%;
+      width: 29%;
+      border-radius: 1.5em;
+      background-color: white;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .h-image {
+      width: 100%;
+    }
+
+    main {
+      height: 74%;
+      padding: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .music {
+      padding: 5%;
+      border-radius: 0.8em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--very-pale-blue);
+    }
+
+    .icon-text {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration-line: none;
+    }
+
+    .text {margin-left: 2%;}
+    
+    h3 {
+      color: var(--dark-blue);
+      font-size: 0.9rem;
+    }
+    
+    .price {
+      color: var(--desaturated-blue);
+      font-size: 0.9rem;
+    }
+
+    article {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 5%;
+      color: var(--dark-blue);
+      font-weight: 900;
+    }
+
+    .article {
+      font-size: 0.86rem;
+      line-height: 1.3rem;
+      padding: 0 6%;
+      font-weight: 500;
+      color: var(--desaturated-blue);
+    }
+
+    button {
+      padding: 4% 2%;
+      background-color: var(--bright-blue);
+      border: none;
+      border-radius: 1em;
+      color: white;
+      font-family: 'Red Hat Display', sans-serif;
+      box-shadow: 0px 20px 10px 3px var(--very-pale-blue);
+    }
+
+    .proceed:hover {
+      background-color: hsla(245, 75%, 52%, .7);
+      cursor: pointer;
+    }
+
+    .cancel {
+      background-color: rgba(0, 0, 0, 0%);
+      padding: 0%;
+      text-align: center;
+      color: var(--desaturated-blue);
+      font-weight: 800;
+      box-shadow: none;
+      margin-top: 3%;
+    }
+
+    .cancel:hover {
+      cursor: pointer;
+      color: hsl(223, 47%, 23%);
+    }
+
+    /* CSS Variables */
+    :root {
+      --pale-blue: hsl(225, 100%, 94%);
+      --bright-blue: hsl(245, 75%, 52%);
+      --very-pale-blue: hsl(225, 100%, 98%);
+      --desaturated-blue: hsl(224, 23%, 55%);
+      --dark-blue: hsl(223, 47%, 23%);
+    }
+
+    @media screen and (max-width: 375px) {
+      body {
+        background-image: url(./images/pattern-background-mobile.svg);
+      } 
+      .card {
+        width: 85%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <img class="h-image" src="./images/illustration-hero.svg" alt="Hero">
+    </div>
+    <main>
+      <article>
+        <h1>Order Summary</h1>
+        <p class="article">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      </article>
+        <div class="music">
+          <div class="icon-text">
+            <img src="./images/icon-music.svg" alt="Music">
+            <div class="text">
+              <h3>Annual Plan</h3>
+              <p class="price">$59.99/year</p>
+            </div>
+          </div>
+          <div><a href="#1">Change</a></div>
+        </div>
+        <button type="submit" class="proceed">Proceed to Payment</button>
+        <button type="submit" class="cancel">Cancel Order</button>
+    </main>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
